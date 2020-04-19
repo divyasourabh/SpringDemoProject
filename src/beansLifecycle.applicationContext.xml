@@ -10,7 +10,7 @@
 	<!-- Add a logger config to see logging messages. - For more detailed logs, 
 		set values to "FINEST" - For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html -->
 	<bean id="myLoggerConfig"
-		class="inversionofcontrol.MyLoggerConfig" init-method="initLogger">
+		class="com.ds.inversionofcontrol.MyLoggerConfig" init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
 	</bean>
@@ -19,10 +19,10 @@
 
 	<!-- define the dependency -->
 	<bean id="myFortuneService"
-		class="inversionofcontrol.HappyFortuneService">
+		class="com.ds.inversionofcontrol.HappyFortuneService">
 	</bean>
 
-	<bean id="myCoach" class="inversionofcontrol.TrackCoach"
+	<bean id="myCoach" class="com.ds.inversionofcontrol.TrackCoach"
 		init-method="doMyStartUpStuff" destroy-method="doMyCleanUpStuff">
 
 		<!-- set up constructor injection -->
@@ -30,7 +30,7 @@
 	</bean>
 	
 	<!-- Disposable bean for destroy bean through customBeanProcessor -->
-	<bean id="alphaCoach" class="beanScope.DisposableBeanTrackCoach"
+	<bean id="alphaCoach" class="com.ds.beanScope.DisposableBeanTrackCoach"
 		init-method="doMyStartUpStuff" destroy-method="destroy"
 		scope="prototype">
 
@@ -42,7 +42,7 @@
 	<!-- Bean custom processor to handle calling destroy methods on prototype 
 		scoped beans -->
 	<bean id="customProcessor"
-		class="beanScope.MyCustomBeanProcessor">
+		class="com.ds.beanScope.MyCustomBeanProcessor">
 	</bean>
 
 </beans>

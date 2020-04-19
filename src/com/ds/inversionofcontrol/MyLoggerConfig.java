@@ -1,4 +1,4 @@
-package inversionofcontrol;
+package com.ds.inversionofcontrol;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;

@@ -1,8 +1,8 @@
-package beanScope;
+package com.ds.beanScope;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import inversionofcontrol.Coach;
+import com.ds.inversionofcontrol.Coach;
 
 public class BeanScopeDemoApp {
 

@@ -10,7 +10,7 @@
 	<!-- Add a logger config to see logging messages. - For more detailed logs, 
 		set values to "FINEST" - For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html -->
 	<bean id="myLoggerConfig"
-		class="inversionofcontrol.MyLoggerConfig"
+		class="com.ds.inversionofcontrol.MyLoggerConfig"
 		init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
@@ -20,10 +20,10 @@
 
 	<!-- define the dependency -->
 	<bean id="myFortuneService"
-		class="inversionofcontrol.HappyFortuneService">
+		class="com.ds.inversionofcontrol.HappyFortuneService">
 		</bean>
 
-	<bean id="myCoach" class="inversionofcontrol.TrackCoach"
+	<bean id="myCoach" class="com.ds.inversionofcontrol.TrackCoach"
 	scope="prototype">
 
 		<!-- set up constructor injection -->

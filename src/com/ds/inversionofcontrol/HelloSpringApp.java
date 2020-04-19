@@ -1,4 +1,4 @@
-package inversionofcontrol;
+package com.ds.inversionofcontrol;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

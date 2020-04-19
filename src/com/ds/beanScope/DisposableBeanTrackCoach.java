@@ -1,9 +1,9 @@
-package beanScope;
+package com.ds.beanScope;
 
 import org.springframework.beans.factory.DisposableBean;
 
-import inversionofcontrol.Coach;
-import inversionofcontrol.FortuneService;
+import com.ds.inversionofcontrol.Coach;
+import com.ds.inversionofcontrol.FortuneService;
 
 public class DisposableBeanTrackCoach implements Coach,DisposableBean {
 

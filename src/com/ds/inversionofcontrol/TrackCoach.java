@@ -1,4 +1,4 @@
-package inversionofcontrol;
+package com.ds.inversionofcontrol;
 
 public class TrackCoach implements Coach {
 

@@ -1,4 +1,4 @@
-package beanScope;
+package com.ds.beanScope;
 
 import java.util.LinkedList;
 import java.util.List;
