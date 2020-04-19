@@ -4,17 +4,17 @@ import org.springframework.stereotype.Component;
 
 import com.ds.inversionofcontrol.Coach;
 
-@Component("theTennisCoach")
+@Component
 public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Practice your backhand volley";
+		return "TennisCoach: Practice your backhand volley";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		return "Tennis sample daily fortune";
+		return "TennisCoach: Tennis sample daily fortune";
 	}
 
 }
