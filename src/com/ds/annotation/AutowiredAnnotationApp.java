@@ -10,6 +10,11 @@ public class AutowiredAnnotationApp {
 
 		AnnotationCoach footballCoach = context.getBean("footballAutowired",AnnotationCoach.class);
 		System.out.println("MSG: " + footballCoach.getDailyWorkout());
+		
+		
+		AnnotationCoach autowiredTennisCoach = context.getBean("autowiredTennisCoach",AnnotationCoach.class);
+		System.out.println("MSG: " + autowiredTennisCoach.getDailyWorkout());
+		System.out.println("MSG: " + autowiredTennisCoach.getDailyFortune());
 	}
 
 }
