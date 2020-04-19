@@ -6,7 +6,7 @@ import com.ds.inversionofcontrol.Coach;
 import com.ds.inversionofcontrol.FortuneService;
 
 @Component("thetrackCoach")
-public class TrackCoach implements Coach {
+public class TrackCoach implements AnnotationCoach {
 
 	private FortuneService fortuneService;
 

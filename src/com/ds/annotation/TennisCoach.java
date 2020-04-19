@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.ds.inversionofcontrol.Coach;
 
 @Component
-public class TennisCoach implements Coach {
+public class TennisCoach implements AnnotationCoach {
 
 	@Override
 	public String getDailyWorkout() {
