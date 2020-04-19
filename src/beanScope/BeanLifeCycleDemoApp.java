@@ -17,6 +17,13 @@ public class BeanLifeCycleDemoApp {
 		System.out.println(theCoach.getDailyWorkout());
 		
 		System.out.println(theCoach.getDailyFortune());
+		
+		Coach alphaCoach = context.getBean("alphaCoach", Coach.class);
+		
+		System.out.println(alphaCoach.getDailyWorkout());
+		
+		System.out.println(alphaCoach.getDailyFortune());
+		
 		context.close();
 	}
 

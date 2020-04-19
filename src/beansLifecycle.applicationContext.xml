@@ -28,5 +28,21 @@
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortuneService" />
 	</bean>
+	
+	<!-- Disposable bean for destroy bean through customBeanProcessor -->
+	<bean id="alphaCoach" class="beanScope.DisposableBeanTrackCoach"
+		init-method="doMyStartUpStuff" destroy-method="destroy"
+		scope="prototype">
+
+		<!-- set up constructor injection -->
+		<constructor-arg ref="myFortuneService" />
+	</bean>
+
+
+	<!-- Bean custom processor to handle calling destroy methods on prototype 
+		scoped beans -->
+	<bean id="customProcessor"
+		class="beanScope.MyCustomBeanProcessor">
+	</bean>
 
 </beans>

@@ -22,13 +22,13 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Run a hard 5k";
+		return "TrackCoach: Run a hard 5k";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		return "Just Do It: " + fortuneService.getFortune();
-	}
+		return "TrackCoach: Just Do It: " + fortuneService.getFortune();
+	}	
 }
 
 
