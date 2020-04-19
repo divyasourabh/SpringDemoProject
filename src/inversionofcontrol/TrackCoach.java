@@ -7,9 +7,17 @@ public class TrackCoach implements Coach {
 	public TrackCoach() {
 		System.out.println("TrackCoach: No arg Constructor");
 	}
-	
+
 	public TrackCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
+	}
+
+	public void doMyStartUpStuff() {
+		System.out.println("TrackCoach: doMyStartUpStuff");
+	}
+
+	public void doMyCleanUpStuff() {
+		System.out.println("TrackCoach: doMyCleanUpStuff");
 	}
 
 	@Override
