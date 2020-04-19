@@ -2,17 +2,22 @@ package com.ds.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import com.ds.inversionofcontrol.Coach;
 
 @Component
 public class AutowiredTennisCoach implements AnnotationCoach {
-	
-//	Field Injection
+
+	@Value("${foo.email}")
+	private String email;
+
+	@Value("${team}")
+	private String team;
+
+	//	Field Injection
 	@Autowired
 	AnnotationFortuneService annotationFortuneService;
-	
+
 	@Autowired
 	@Qualifier("multiFortuneService")
 	FortuneService fortuneService;
@@ -20,7 +25,7 @@ public class AutowiredTennisCoach implements AnnotationCoach {
 	public AutowiredTennisCoach() {
 		System.out.println("AutowiredTennisCoach : no Arg constructor");
 	}
-	
+
 	//setter Injection
 	@Autowired
 	public void setAnnotationFortuneService(AnnotationFortuneService thFortuneService) {
@@ -28,16 +33,18 @@ public class AutowiredTennisCoach implements AnnotationCoach {
 		System.out.println("setAnnotationFortuneService");
 	}
 
-//	Name of method dosenot matter for autowired
+	//	Name of method dosenot matter for autowired
 	@Autowired
 	public void doSomeCrazyStuff(AnnotationFortuneService thFortuneService) {
 		this.annotationFortuneService = thFortuneService;
 		System.out.println("doSomeCrazyStuff");
 	}
 
-	
+
 	@Override
 	public String getDailyWorkout() {
+		System.out.println("Email: " + email);
+		System.out.println("Team: " + team);
 		return "AutowiredTennisCoach: Practice your backhand volley";
 	}
 
